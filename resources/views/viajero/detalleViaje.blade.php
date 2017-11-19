@@ -4,15 +4,12 @@
 <div class="col-xs-12 text-center">
     <span class="h1">Detalle del viaje</span>
 </div>
-<div class="col-xs-12">
-    foto del conductor
-</div>
 <div class="col-xs-12 jumbotron">
     <label>Conductor: </label> {{$viaje->plaza->conductor->nombre}}<br/>
     <label>Carro: </label> {{$viaje->plaza->conductor->carro->placa}} - {{$viaje->plaza->conductor->carro->modelo}}<br/>
     <label>Fecha y hora salida: </label> {{$viaje->plaza->salida}}<br/>
-    <label>Origen: </label> {{$viaje->plaza->tarifa->puntoOrigen->nombre}} - {{$viaje->plaza->tarifa->puntoOrigen->descripicion}}<br/>
-    <label>Destino: </label> {{$viaje->plaza->tarifa->puntoDestino->nombre}} - {{$viaje->plaza->tarifa->puntoDestino->descripicion}}<br/>
+    <label>Origen: </label> {{$viaje->plaza->tarifa->puntoOrigen->nombre}} - {{$viaje->plaza->tarifa->puntoOrigen->descripcion}}<br/>
+    <label>Destino: </label> {{$viaje->plaza->tarifa->puntoDestino->nombre}} - {{$viaje->plaza->tarifa->puntoDestino->descripcion}}<br/>
     <label>Kilometros: </label> {{$viaje->plaza->tarifa->km}}<br/>
     <label>Precio: </label> ${{$viaje->plaza->tarifa->precio}}<br/>
 </div>

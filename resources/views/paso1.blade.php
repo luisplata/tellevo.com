@@ -5,7 +5,7 @@
     <div class="col text-center">
         <span class="h1">Hola</span>
         <p>
-            Te damos la bienvenida a <b>tellevamos.com</b>, Primero dinos a que quieres hacer?
+            Te damos la bienvenida a <b>tellevamos.co</b>. Primero dinos, <br/>¿que quieres hacer?
         </p>
     </div>
 </div>

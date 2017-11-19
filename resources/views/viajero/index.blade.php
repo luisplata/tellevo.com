@@ -2,7 +2,7 @@
 @section("contenido")
 <div class="row">
     <div class="col text-center">
-        <p class="h2">Hola, <spam class="text-capitalize">{{Session("viajero")->nombre}}</spam> que desas hacer?</p>
+        <p class="h2">Hola, <spam class="text-capitalize">{{Session("viajero")->nombre}}</spam> <br/>¿Que deseas hacer?</p>
     </div>
 </div>
 <div class="row text-center">
