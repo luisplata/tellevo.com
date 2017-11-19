@@ -1,6 +1,16 @@
 @extends("inicio")
 @section("contenido")
-<p>Hola, {{Session("viajero")->nombre}} que desas hacer?</p>
-<a class="btn btn-default" href="{{url('viajero/calificarViaje')}}">Calificar Viajes</a>
-<a class="btn btn-default" href="{{url("viajero/filtro")}}">Buscar viaje</a>
+<div class="row">
+    <div class="col text-center">
+        <p class="h2">Hola, <spam class="text-capitalize">{{Session("viajero")->nombre}}</spam> que desas hacer?</p>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-6">
+        <a class="btn btn-primary btn-lg" href="{{url("viajero/filtro")}}">Buscar viaje</a>
+    </div>
+    <div class="col-6">
+        <a class="btn btn-info btn-lg" href="{{url('viajero/calificarViaje')}}">Calificar Viajes</a>
+    </div>
+</div>
 @endsection

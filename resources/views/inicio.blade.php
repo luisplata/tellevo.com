@@ -1,75 +1,77 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <link rel="stylesheet" href="{{asset("css/bootstrap.min.css")}}">
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Hello, world!</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
         <style>
+            /* Sticky footer styles
+-------------------------------------------------- */
+            html {
+                position: relative;
+                min-height: 100%;
+            }
             body {
-                padding-top: 50px;
-                padding-bottom: 20px;
+                /* Margin bottom by footer height */
+                margin-bottom: 60px;
+            }
+            .footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                /* Set the fixed height of the footer here */
+                height: 60px;
+                line-height: 60px; /* Vertically center the text there */
+                background-color: #f5f5f5;
+            }
+
+
+            /* Custom page CSS
+            -------------------------------------------------- */
+            /* Not required for template or sticky footer method. */
+
+            .container {
+                width: auto;
+                max-width: 680px;
+                padding: 0 15px;
             }
         </style>
-        <link rel="stylesheet" href="{{asset("css/bootstrap-theme.min.css")}}">
-        <link rel="stylesheet" href="{{asset("css/main.css")}}">
-
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="{!! asset('css/sweetalert.css') !!}" />
-        <script src="{{asset("js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")}}"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <b><a class="navbar-brand" href="@yield('atras',url(''))"><</a></b>
-                </div>
-            </div>
+        <!-- As a heading -->
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="@yield('atras',url(''))">
+                <img src="http://getbootstrap.com/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                TeLlevamos.com
+            </a>
         </nav>
-        <div>
+        <div class="container  h-100">
+            <div class="h-100 justify-content-center align-items-center">
 
-            @yield("contenido")
-
+                @yield("contenido")
+            </div>
         </div>
-        <hr>
 
-        <footer>
-            <p>&copy; Team T</p> Desarrollado por: <a href="https://luisplata.github.io" target="_blank">Luis Plata</a>
+        <footer class="footer">
+            <div class="container">
+                <spam> &copy; Team T</spam> <spam class="float-right">Desarrollado por: <a href="https://luisplata.github.io" target="_blank">Luis Plata</a></spam>
+            </div>
         </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{asset("js/vendor/jquery-1.11.2.min.js")}}"><\/script>')</script>
 
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="{{asset("js/vendor/bootstrap.min.js")}}"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-    <script src="{{asset("js/main.js")}}"></script>
-    <script src="{{asset('/js/sweetalert.min.js')}}"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-(function (b, o, i, l, e, r) {
-    b.GoogleAnalyticsObject = l;
-    b[l] || (b[l] =
-            function () {
-                (b[l].q = b[l].q || []).push(arguments)
-            });
-    b[l].l = +new Date;
-    e = o.createElement(i);
-    r = o.getElementsByTagName(i)[0];
-    e.src = '//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e, r)
-}(window, document, 'script', 'ga'));
-ga('create', 'UA-XXXXX-X', 'auto');
-ga('send', 'pageview');
+        <script src="{{asset('/js/sweetalert.min.js')}}"></script>
+        <script src="{{asset("js/main.js")}}"></script>
+        <script>
 var url_string = window.location;
 var url = new URL(url_string);
 var mensaje = url.searchParams.get("mensaje");
@@ -78,7 +80,7 @@ var titulo = url.searchParams.get("titulo");
 if (mensaje != null) {
     swal(titulo == null ? "" : titulo, mensaje, tipo == null ? "info" : tipo);
 }
-    </script>
-    @yield("script")
-</body>
+        </script>
+        @yield("script")
+    </body>
 </html>

@@ -12,6 +12,9 @@
  */
 
 Route::get('/', function () {
+    return view('index');
+});
+Route::get("app", function() {
     return view('paso1');
 });
 Route::get("conductor", function() {
@@ -31,9 +34,9 @@ Route::get("logout", function() {
     Session::flush(); // removes all session data
     return redirect("/");
 });
-Route::get("viajero","Controladores@index");
+Route::get("viajero", "Controladores@index");
 Route::post("viajero/calificarViaje", "Controladores@calificarViaje");
 Route::get("viajero/calificarViaje", "Controladores@mostrarCalificarViaje");
 Route::get("viajero/calificaciones", "Controladores@mostrarCalificacionesPendientes");
-Route::get("viajero/filtro","Controladores@filtro");
-Route::get("viajero/autenticar","Controladores@autenticar");
+Route::get("viajero/filtro", "Controladores@filtro");
+Route::get("viajero/autenticar", "Controladores@autenticar");
